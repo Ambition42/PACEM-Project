@@ -18,8 +18,7 @@ class Music:
 
 
 class MusicLibrary:
-    def __init__(self, musics, adjectives_index):
-        self.musics = musics
+    def __init__(self, adjectives_index):
         self.adjectives_index = adjectives_index
 
     def add_music(self, music):
@@ -221,7 +220,7 @@ def stop_music():
         pause = False
 
 
-library = MusicLibrary([], defaultdict(list))
+library = MusicLibrary(defaultdict(list))
 library.load_from_json("music_data.json")
 
 pygame.mixer.init()
