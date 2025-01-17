@@ -22,7 +22,6 @@ class MusicLibrary:
         self.adjectives_index = adjectives_index
 
     def add_music(self, music):
-        self.musics.append(music)
         for adj in music.adjectives:
             self.adjectives_index[adj].append(music)
 
