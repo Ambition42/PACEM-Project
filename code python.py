@@ -123,7 +123,7 @@ def simplify_text(basic_text):
                      "oppressant", "oppressante", "menaçant", "menaçante", "menaçants", "menaçantes", "terreur",
                      "terreurs", "effroi", "sang", "sanglant", "sanglante", "sanglants", "sanglantes", "sinistres",
                      "terrifiant", "terrifiante", "cadavre", "cadavres", "cadavérique", "squelette", "squelettes",
-                     "cimetière", "cimetières", "tombe", "tombes", "tombale", "tombales", "malaise", "maléfique",
+                     "cimetière", "cimetières", "tombale", "tombales", "malaise", "maléfique",
                      "horreur", "horreurs", "catacombes", "horrible", "horribles", "affreux", "affreuse", "affreuses",
                      "abominable", "atroce"],
         "puissant": ["grandiose", "magnifique", "puissance", "grandeur", "grand", "majestueux", "prestige",
