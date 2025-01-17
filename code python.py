@@ -1,13 +1,13 @@
 # Ce fichier est sous licence Creative Commons Attribution - Pas d'Utilisation Commerciale 4.0 International.
 # Voir le fichier LICENSE pour plus de détails.
 
-import speech_recognition as sr  # Permet de gérer la reconnaissance vocale
-import pygame  # Permet de contrôler la musique
-import random  # Permet de simuler l'aléatoire
-import tkinter  # Permet d'afficher l'interface utilisateur
+import speech_recognition as sr  # Gère la reconnaissance vocale
+import pygame  # Contrôle la musique
+import random  # Simule l'aléatoire
+import tkinter  # Affiche l'interface utilisateur
 import serial  # Permet la communication avec la carte Arduino
-import json  # Permet de charger le fichier contenant les musiques
-from collections import defaultdict  # Permet d'optimiser le code en créant des indexes
+import json  # Charge le fichier contenant les musiques
+from collections import defaultdict  # Optimise le code en créant des indexes
 
 
 class Music:
