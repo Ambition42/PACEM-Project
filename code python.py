@@ -166,7 +166,7 @@ def simplify_text(basic_text):
     if "tout à coup" in basic_text:
         simplified_text.append("surprise")
 
-    separated_text = basic_text.split()
+    separated_text = basic_text.split()  # Sépare le texte en plusieurs mots stockés dans une liste
 
     for word in separated_text:
         for key, synonyms_list in vocabulary.items():
