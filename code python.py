@@ -21,6 +21,10 @@ class MusicLibrary:
     def __init__(self, adjectives_index):
         self.adjectives_index = adjectives_index
 
+    def add_music(self, music):
+        for adj in music.adjectives:
+            self.adjectives_index[adj].append(music)
+
     def search_by_adjectives(self, description):
         matching_musics = []
 
@@ -37,8 +41,7 @@ class MusicLibrary:
         for item in data:
             adjectives = item["adjectives"]
             source = item["source"]
-            for adj in music.adjectives:
-                self.adjectives_index[adj].append(music)  # Pour chaque adjectif de la musique, on ajoute la musique à la clé correspondant à l'adjectif dans le dictionnaire adjectives_index
+            self.add_music(Music(adjectives, source))
 
 
 def choose_music(description, music_list):
@@ -166,7 +169,7 @@ def simplify_text(basic_text):
     if "tout à coup" in basic_text:
         simplified_text.append("surprise")
 
-    separated_text = basic_text.split()  # Sépare le texte en plusieurs mots stockés dans une liste
+    separated_text = basic_text.split()
 
     for word in separated_text:
         for key, synonyms_list in vocabulary.items():
