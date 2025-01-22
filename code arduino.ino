@@ -257,9 +257,8 @@ void simulate_combat_effect() {
 
 void simulate_fire_effect() {
   for (int i = 0; i<NUM_LEDS; i++) {
-    
     leds[i] = CRGB(random(150, 255), random(0, 75), 0);
-  
   }
+  
   delay(10);
 }
