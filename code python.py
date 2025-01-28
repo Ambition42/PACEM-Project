@@ -64,7 +64,7 @@ def choose_music(description, music_list):
                 Song.score -= 0.5
 
     random.shuffle(music_list)
-    sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)
+    sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)  # Les musiques sont triées par ordre décroissant selon leur score
 
     next_music = sorted_musics[0].source
     print("The music is : %s" % next_music)
@@ -76,7 +76,7 @@ def choose_music(description, music_list):
 
         pygame.mixer.music.load(next_music)
     pause = False
-    pygame.mixer.music.play(loops=-1)
+    pygame.mixer.music.play(loops=-1)  # La musique est jouée en boucle
 
 
 def detect_speech():
