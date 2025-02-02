@@ -16,6 +16,7 @@ Prerequisites :
 - Python 3.x
 - Arduino IDE
 - Required Python libraries : speech_recognition, pygame, random, tkinter, serial, json, collections, defaultdict
+- Required Arduino library : FastLED
 
 First, clone the repository :
 ```bash 
