@@ -18,7 +18,7 @@ Prerequisites :
 - Required Python libraries : speech_recognition, pygame, random, tkinter, serial, json, collections, defaultdict
 
 First, clone the repository :
-$ git clone https://github.com/Ambition42/PACEM-Project.git
+```bash $ git clone https://github.com/Ambition42/PACEM-Project.git ```bash
 
 Upload the Arduino script to your board.
 
@@ -27,9 +27,5 @@ Run the Python script. You should see a graphical interface appear.
 ## Language
 The name "PACEM" comes from the french acronym Plateau d'Ambiance Contrôlant l'Eclairage et la Musique.
 For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version to allow users to choose the language.
-
-```bash
-   git clone https://github.com/Ambition42/PACEM.git
-   cd PACEM
 
 
