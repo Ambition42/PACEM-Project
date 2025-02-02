@@ -204,7 +204,7 @@ def validate_manual_control():
     text_area.delete(0, tkinter.END)
     text_area.pack_forget()
     validate_button.pack_forget()
-    controle_button.pack()
+    controle_button.pack(pady=10)
 
 
 def stop_music():
