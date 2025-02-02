@@ -25,7 +25,9 @@ $ git clone https://github.com/Ambition42/PACEM-Project.git
 
 Upload the Arduino script to your board.
 
-Run the Python script. You should see a graphical interface appear.
+Run the Python script. You should see a graphical interface appear. 
+
+You can now start using the PACEM to enhance your roleplay game nights !
 
 ## Language
 The name "PACEM" comes from the french acronym Plateau d'Ambiance Contrôlant l'Eclairage et la Musique.
