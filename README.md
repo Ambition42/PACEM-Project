@@ -24,4 +24,4 @@ git clone https://github.com/Ambition42/PACEM-Project.git
 
 Upload the Arduino script to your board.
 
-Run the Python script.
+Run the Python script. You should see a graphical interface appear.
