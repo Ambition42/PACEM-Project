@@ -1,4 +1,4 @@
-# PACEM-Project
+# PACEM - Plateau d'Ambiance Contrôlant l'Eclairage et la Musique
 
 This repository contains all the necessary files to make a PACEM prototype operationnal.
 
