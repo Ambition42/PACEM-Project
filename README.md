@@ -12,3 +12,9 @@ PACEM is an immersive ambiance system designed for tabletop role-playing games (
  - A user-friendly tkinter interface for manual and automatic control.
 
 For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version, where users will be able to choose their language.
+
+## Installation
+Prerequisites :
+- Python 3.x
+- Arduino IDE
+- Required Python libraries : speech_recognition, pygame, random, tkinter, serial, json, collections, defaultdict
