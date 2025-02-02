@@ -1,5 +1,6 @@
 # PACEM - Plateau d'Ambiance Contrôlant l'Eclairage et la Musique
 
+## Overview
 PACEM is an immersive ambiance system designed for tabletop role-playing games (TTRPGs) like Dungeons & Dragons. It dynamically adjusts background music and LED lighting based on the game master's descriptions. The system consists of:
 
  - A voice recognition program that analyzes the game master's descriptions and extracts keywords.
