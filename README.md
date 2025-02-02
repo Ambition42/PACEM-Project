@@ -18,7 +18,9 @@ Prerequisites :
 - Required Python libraries : speech_recognition, pygame, random, tkinter, serial, json, collections, defaultdict
 
 First, clone the repository :
-```bash $ git clone https://github.com/Ambition42/PACEM-Project.git ```bash
+```bash 
+$ git clone https://github.com/Ambition42/PACEM-Project.git
+```
 
 Upload the Arduino script to your board.
 
