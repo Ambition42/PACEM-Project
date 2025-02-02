@@ -1,4 +1,4 @@
-# PACEM - Plateau d'Ambiance Contrôlant l'Eclairage et la Musique
+# PACEM Project
 
 ## Overview
 PACEM is an immersive ambiance system designed for tabletop role-playing games (TTRPGs) like Dungeons & Dragons. It dynamically adjusts background music and LED lighting based on the game master's descriptions. The system consists of:
@@ -10,8 +10,6 @@ PACEM is an immersive ambiance system designed for tabletop role-playing games (
  - An Arduino-controlled LED strip (WS2812B) that adjusts colors and effects according to the scene.
 
  - A user-friendly tkinter interface for manual and automatic control.
-
-For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version to allow users to choose the language.
 
 ## Installation
 Prerequisites :
@@ -25,3 +23,8 @@ git clone https://github.com/Ambition42/PACEM-Project.git
 Upload the Arduino script to your board.
 
 Run the Python script. You should see a graphical interface appear.
+
+## Language
+The name "PACEM" comes from the french acronym Plateau d'Ambiance Contrôlant l'Eclairage et la Musique.
+For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version to allow users to choose the language.
+
