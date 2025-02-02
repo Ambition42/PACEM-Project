@@ -11,7 +11,7 @@ PACEM is an immersive ambiance system designed for tabletop role-playing games (
 
  - A user-friendly tkinter interface for manual and automatic control.
 
-For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version, where users will be able to choose their language.
+For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version to allow users to choose the language.
 
 ## Installation
 Prerequisites :
