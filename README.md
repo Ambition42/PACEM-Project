@@ -20,7 +20,7 @@ Prerequisites :
 
 First, clone the repository :
 ```bash 
-$ git clone https://github.com/Ambition42/PACEM-Project.git
+git clone https://github.com/Ambition42/PACEM-Project.git
 ```
 
 Upload the Arduino script to your board.
