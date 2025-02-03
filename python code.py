@@ -1,10 +1,10 @@
 # This work is licensed under a Creative Commons Attribution - NonCommercial 4.0 International License
 
-import speech_recognition as sr  # Gère la reconnaissance vocale
-import pygame  # Contrôle la musique
-import random  # Simule l'aléatoire
-import tkinter  # Affiche l'interface utilisateur
-import serial  # Permet la communication avec la carte Arduino
+import speech_recognition as sr  # Handles vocal recognition
+import pygame  # Controls the music
+import random  # Simulates randomness
+import tkinter  # Displays the user interface
+import serial  # Allows communication with the Arduino board
 import json  # Charge le fichier contenant les musiques
 from collections import defaultdict  # Optimise le code en créant des indexes
 
