@@ -1,5 +1,4 @@
-// Ce fichier est sous licence Creative Commons Attribution - Pas d'Utilisation Commerciale 4.0 International.
-// Voir le fichier LICENSE pour plus de détails.
+// This work is licensed under a Creative Commons Attribution - NonCommercial 4.0 International License
 
 #include <FastLED.h>
 
