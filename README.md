@@ -31,6 +31,6 @@ You can now start using the PACEM to enhance your roleplay game nights !
 
 ## Language
 The name "PACEM" comes from the french acronym Plateau d'Ambiance Contrôlant l'Eclairage et la Musique.
-For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version to allow users to choose the language.
+For now, the PACEM can only understand descriptions in french. Our team is currently working on an improved version to allow users to choose the language they want.
 
 
