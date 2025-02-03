@@ -209,8 +209,8 @@ void simulate_river_effect() {
 
 
 void simulate_tavern_effect() {
-  static uint8_t blendFactor = 0;       // Facteur de mélange (0-255)
-  static bool increasing = true;       // Indique si le facteur augmente ou diminue
+  static uint8_t blendFactor = 0; 
+  static bool increasing = true;    
 
   
   CRGB blendedColor = blend(CRGB::Yellow, CRGB(255, 80, 0), blendFactor);
