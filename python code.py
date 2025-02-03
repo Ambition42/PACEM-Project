@@ -5,8 +5,8 @@ import pygame  # Controls the music
 import random  # Simulates randomness
 import tkinter  # Displays the user interface
 import serial  # Allows communication with the Arduino board
-import json  # Charge le fichier contenant les musiques
-from collections import defaultdict  # Optimise le code en créant des indexes
+import json  # Loads the file containing the musics
+from collections import defaultdict  # Optimizes the code by creating indexes
 
 
 class Music:
