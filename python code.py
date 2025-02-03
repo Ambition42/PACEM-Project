@@ -158,7 +158,7 @@ def simplify_text(basic_text):
 
     simplified_text = []
 
-    # Expressions en plusieurs mots
+    # Multi-words expressions
     if "ciel d'encre" in basic_text:
         simplified_text.append("nuit")
     if "tout se passe bien" in basic_text or "tout va bien" in basic_text:
