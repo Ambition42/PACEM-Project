@@ -226,7 +226,7 @@ pygame.mixer.init()
 arduino = serial.Serial('/dev/tty.usbserial-1420', 9600)
 
 root = tkinter.Tk()
-root.geometry("200x150")  # Dimensions de la fenêtre
+root.geometry("200x150")
 root.title("PACEM Controller")
 
 current_music = None
