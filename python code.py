@@ -33,7 +33,7 @@ class MusicLibrary:
         return list({music.source: music for music in matching_musics}.values())
 
     def load_from_json(self, json_path):
-        # La fonction renvoie toutes les musiques du fichier JSON
+        # The function returns all the musics from the JSON file
         with open(json_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
 
