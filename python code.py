@@ -63,7 +63,7 @@ def choose_music(description, music_list):
                 Song.score -= 0.5
 
     random.shuffle(music_list)
-    sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)  # Les musiques sont triées par ordre décroissant selon leur score
+    sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)  # Musics are sorted by decreasing order according to their score
 
     next_music = sorted_musics[0].source
     
@@ -75,7 +75,7 @@ def choose_music(description, music_list):
 
         pygame.mixer.music.load(next_music)
     pause = False
-    pygame.mixer.music.play(loops=-1)  # La musique est jouée en boucle
+    pygame.mixer.music.play(loops=-1)  # The music is played undefinitely
 
 
 def detect_speech():
@@ -232,7 +232,7 @@ root.title("PACEM Controller")
 current_music = None
 pause = False
 
-# Initialisation des boutons de l'interface
+# Initialization of the interface buttons
 voice_recognition_button = tkinter.Button(root, text="Détection de parole", command=activate_voice_recognition)
 controle_button = tkinter.Button(root, text="Contrôle manuel", command=manual_control)
 validate_button = tkinter.Button(root, text="Valider le texte", command=validate_manual_control)
