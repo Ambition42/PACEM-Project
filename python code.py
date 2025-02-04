@@ -75,7 +75,7 @@ def choose_music(description, music_list):
 
         pygame.mixer.music.load(next_music)
     pause = False
-    pygame.mixer.music.play(loops=-1)  # The music is played undefinitely
+    pygame.mixer.music.play(loops=-1)  # The music is played indefinitely
 
 
 def detect_speech():
