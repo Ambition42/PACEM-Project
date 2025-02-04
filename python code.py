@@ -63,17 +63,17 @@ def choose_music(description, music_list):
                 Song.score -= 0.5
 
     random.shuffle(music_list)
-    sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)  # Musics are sorted by decreasing order according to their score
+    sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)
+    # Musics are sorted by decreasing order according to their score
 
     next_music = sorted_musics[0].source
-    
-    if current_music is None:
-        pygame.mixer.music.load(next_music)
-        current_music = next_music
-    else:
-        pygame.mixer.music.fadeout(2000)
 
-        pygame.mixer.music.load(next_music)
+    if current_music is not None:
+        pygame.mixer.music.fadeout(2000)  # If there was another music playing, it fades out
+
+    current_music = next_music
+    pygame.mixer.music.load(next_music)
+
     pause = False
     pygame.mixer.music.play(loops=-1)  # The music is played indefinitely
 
@@ -87,7 +87,7 @@ def detect_speech():
         except sr.UnknownValueError:
             print("Je n'ai pas compris.")
         except sr.RequestError:
-            print(f"Erreur de service : {sr.RequestError}") # a remplacer par un message tkinter
+            print(f"Erreur de service : {sr.RequestError}")  # a remplacer par un message tkinter
         return text
 
 
@@ -176,7 +176,7 @@ def simplify_text(basic_text):
                 simplified_word = key
                 simplified_text.append(simplified_word)
                 break
-    print(simplified_text)
+                
     return simplified_text
 
 
