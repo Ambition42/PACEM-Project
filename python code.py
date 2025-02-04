@@ -66,7 +66,7 @@ def choose_music(description, music_list):
     sorted_musics = sorted(music_list, key=lambda x: x.score, reverse=True)  # Les musiques sont triées par ordre décroissant selon leur score
 
     next_music = sorted_musics[0].source
-    print("The music is : %s" % next_music)
+    
     if current_music is None:
         pygame.mixer.music.load(next_music)
         current_music = next_music
@@ -87,7 +87,7 @@ def detect_speech():
         except sr.UnknownValueError:
             print("Je n'ai pas compris.")
         except sr.RequestError:
-            print(f"Erreur de service : {sr.RequestError}")
+            print(f"Erreur de service : {sr.RequestError}") # a remplacer par un message tkinter
         return text
 
 
