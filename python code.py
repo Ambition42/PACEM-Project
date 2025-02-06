@@ -4,7 +4,7 @@ import speech_recognition as sr  # Handles vocal recognition
 import pygame  # Controls the music
 import random  # Simulates randomness
 import tkinter  # Displays the user interface
-import serial  # Allows communication with the Arduino board
+# import serial  # Allows communication with the Arduino board
 import json  # Loads the file containing the musics
 from collections import defaultdict  # Optimizes the code by creating indexes
 
@@ -47,7 +47,7 @@ def choose_music(description, music_list):
     global current_music
     global pause
 
-    arduino.write(" ".join(description).encode())
+    # arduino.write(" ".join(description).encode())
 
     for Song in music_list:
         Song.score = 0
@@ -79,16 +79,23 @@ def choose_music(description, music_list):
 
 
 def detect_speech():
+    root.geometry("200x150")
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         audio = recognizer.listen(source)
         try:
             text = recognizer.recognize_google(audio, language="fr-FR")
+            return text
         except sr.UnknownValueError:
-            print("Je n'ai pas compris.")
+            error_text.config(text="Répétez plus clairement...")
+            root.geometry("200x200")
+            error_text.pack(pady=10, side="bottom")
+            return False
         except sr.RequestError:
-            print(f"Erreur de service : {sr.RequestError}")  # a remplacer par un message tkinter
-        return text
+            error_text.config(text=f"Erreur de service :\nVérifiez votre connection Internet")
+            root.geometry("200x200")
+            error_text.pack(pady=10, side="bottom")
+            return False
 
 
 def simplify_text(basic_text):
@@ -176,18 +183,27 @@ def simplify_text(basic_text):
                 simplified_word = key
                 simplified_text.append(simplified_word)
                 break
-                
+    if not simplified_text:
+        error_text.config(text="Aucune musique associée\nà votre description...")
+        error_text.pack(pady=10, side="bottom")
+        root.geometry("200x200")
     return simplified_text
 
 
 def activate_voice_recognition():
+    error_text.forget()
+    root.geometry("200x150")
     speech = detect_speech()
-    final_simplified_text = simplify_text(speech)
-    matching_musics = library.search_by_adjectives(final_simplified_text)
-    choose_music(final_simplified_text, matching_musics)
+    if isinstance(speech, str) and speech:  # Verifies if speech is a non-empty string
+        print(f"Speech : {speech}")
+        final_simplified_text = simplify_text(speech)
+        if final_simplified_text:
+            matching_musics = library.search_by_adjectives(final_simplified_text)
+            choose_music(final_simplified_text, matching_musics)
 
 
 def manual_control():
+    error_text.forget()
     root.geometry("200x200")
     controle_button.pack_forget()
     text_area.pack(pady=10)
@@ -197,9 +213,13 @@ def manual_control():
 def validate_manual_control():
     root.geometry("200x150")
     content = text_area.get().strip()
-    final_simplified_text = simplify_text(content)
-    matching_musics = library.search_by_adjectives(final_simplified_text)
-    choose_music(final_simplified_text, matching_musics)
+    print(f"Content : {content}")
+    if content:
+        final_simplified_text = simplify_text(content)
+        if final_simplified_text:
+            matching_musics = library.search_by_adjectives(final_simplified_text)
+            choose_music(final_simplified_text, matching_musics)
+
     text_area.delete(0, tkinter.END)
     text_area.pack_forget()
     validate_button.pack_forget()
@@ -209,11 +229,11 @@ def validate_manual_control():
 def stop_music():
     global pause
     if pause is False:
-        arduino.write(" ".join(["pause"]).encode())
+        # arduino.write(" ".join(["pause"]).encode())
         pygame.mixer.music.pause()
         pause = True
     else:
-        arduino.write(" ".join(["play"]).encode())
+        # arduino.write(" ".join(["play"]).encode())
         pygame.mixer.music.unpause()
         pause = False
 
@@ -223,7 +243,7 @@ library.load_from_json("music_data.json")
 
 pygame.mixer.init()
 
-arduino = serial.Serial('/dev/tty.usbserial-1420', 9600)
+# arduino = serial.Serial('/dev/tty.usbserial-1420', 9600)
 
 root = tkinter.Tk()
 root.geometry("200x150")
@@ -238,9 +258,11 @@ controle_button = tkinter.Button(root, text="Contrôle manuel", command=manual_c
 validate_button = tkinter.Button(root, text="Valider le texte", command=validate_manual_control)
 play_button = tkinter.Button(root, text="Play/Pause", command=stop_music)
 text_area = tkinter.Entry(root, width=35)
+error_text = tkinter.Label(root, text="")
 
 voice_recognition_button.pack(pady=10)
 controle_button.pack(pady=10)
 play_button.pack(pady=10)
+error_text.pack(pady=10, side="bottom")
 
 root.mainloop()
