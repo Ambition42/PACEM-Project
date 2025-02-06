@@ -4,7 +4,7 @@ import speech_recognition as sr  # Handles vocal recognition
 import pygame  # Controls the music
 import random  # Simulates randomness
 import tkinter  # Displays the user interface
-# import serial  # Allows communication with the Arduino board
+import serial  # Allows communication with the Arduino board
 import json  # Loads the file containing the musics
 from collections import defaultdict  # Optimizes the code by creating indexes
 
@@ -47,7 +47,7 @@ def choose_music(description, music_list):
     global current_music
     global pause
 
-    # arduino.write(" ".join(description).encode())
+    arduino.write(" ".join(description).encode())
 
     for Song in music_list:
         Song.score = 0
@@ -229,11 +229,11 @@ def validate_manual_control():
 def stop_music():
     global pause
     if pause is False:
-        # arduino.write(" ".join(["pause"]).encode())
+        arduino.write(" ".join(["pause"]).encode())
         pygame.mixer.music.pause()
         pause = True
     else:
-        # arduino.write(" ".join(["play"]).encode())
+        arduino.write(" ".join(["play"]).encode())
         pygame.mixer.music.unpause()
         pause = False
 
@@ -243,7 +243,7 @@ library.load_from_json("music_data.json")
 
 pygame.mixer.init()
 
-# arduino = serial.Serial('/dev/tty.usbserial-1420', 9600)
+arduino = serial.Serial('/dev/tty.usbserial-1420', 9600)
 
 root = tkinter.Tk()
 root.geometry("200x150")
