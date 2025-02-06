@@ -2,11 +2,12 @@
 
 from collections import defaultdict  # Optimizes the code by creating indexes
 import json  # Loads the file containing the musics
-import pygame  # Controls the music
 import random  # Simulates randomness
+import tkinter  # Displays the user interface
+
+import pygame  # Controls the music
 import serial  # Allows communication with the Arduino board
 import speech_recognition as sr  # Handles vocal recognition
-import tkinter  # Displays the user interface
 
 
 class Music:
