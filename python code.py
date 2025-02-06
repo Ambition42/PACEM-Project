@@ -48,7 +48,7 @@ def choose_music(description, music_list):
     global current_music
     global pause
 
-    arduino.write(" ".join(description).encode())
+    arduino.write(" ".join(description).encode())  # The final description is transmitted to Arduino
 
     for Song in music_list:
         Song.score = 0
@@ -196,7 +196,6 @@ def activate_voice_recognition():
     root.geometry("200x150")
     speech = detect_speech()
     if isinstance(speech, str) and speech:  # Verifies if speech is a non-empty string
-        print(f"Speech : {speech}")
         final_simplified_text = simplify_text(speech)
         if final_simplified_text:
             matching_musics = library.search_by_adjectives(final_simplified_text)
@@ -214,7 +213,6 @@ def manual_control():
 def validate_manual_control():
     root.geometry("200x150")
     content = text_area.get().strip()
-    print(f"Content : {content}")
     if content:
         final_simplified_text = simplify_text(content)
         if final_simplified_text:
