@@ -89,7 +89,7 @@ def detect_speech():
             return text
         except sr.UnknownValueError:
             error_text.config(text="Répétez plus clairement...")
-            root.geometry("200x200")
+            root.geometry("200x200")  # The window gets bigger to make the message fit in the interface
             error_text.pack(pady=10, side="bottom")
             return False
         except sr.RequestError:
