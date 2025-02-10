@@ -51,7 +51,7 @@ def choose_music(description, music_list):
     arduino.write(" ".join(description).encode())  # The final description is transmitted to Arduino
 
     for Song in music_list:
-        Song.score = 0
+        Song.score = 0  # The score is reset
         for word in Song.adjectives:
             if word in description:
                 Song.score += 1
