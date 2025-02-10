@@ -93,7 +93,7 @@ def detect_speech():
             error_text.pack(pady=10, side="bottom")
             return False
         except sr.RequestError:
-            error_text.config(text=f"Erreur de service :\nVérifiez votre connection Internet")
+            error_text.config(text=f"Erreur de service :\nVérifiez votre connexion Internet")
             root.geometry("200x200")
             error_text.pack(pady=10, side="bottom")
             return False
