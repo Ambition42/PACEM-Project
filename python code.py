@@ -183,7 +183,7 @@ def simplify_text(basic_text):
     if "tout à coup" in basic_text:
         simplified_text.append("surprise")
 
-    separated_text = basic_text.split()
+    separated_text = basic_text.lower().split()
 
     for word in separated_text:
         for key, synonyms_list in vocabulary.items():
