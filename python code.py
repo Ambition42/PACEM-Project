@@ -187,6 +187,8 @@ def simplify_text(basic_text):
 
     for word in separated_text:
         for key, synonyms_list in vocabulary.items():
+            if word.startswith("l'"):
+                word = word[2:]  # Words starting with l' will be shortened
             if word in synonyms_list or word == key:
                 simplified_word = key
                 simplified_text.append(simplified_word)
