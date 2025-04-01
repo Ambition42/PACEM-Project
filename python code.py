@@ -112,7 +112,7 @@ def simplify_text(basic_text):
         "forêt": ["arbres", "bois", "clairière"],
         "jungle": ["tropical", "tropicale", "liane", "lianes"],
         "laboratoire": ["alchimie", "apothicaire", "chaudron", "chaudrons", "fiole", "fioles", "potion", "potions"],
-        "labyrinthe": ["dédale", "labyrinthesque"],
+        "labyrinthe": ["dédale", "labyrinthique"],
         "marais": ["bayou", "bayous", "marécage", "marécages", "tourbière", "tourbières"],
         "marché": ["brocante", "marchand", "marchands"],
         "montagne": ["mont", "monts", "montagnes"],
